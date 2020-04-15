@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import { AppContext } from "./libs/contextLib";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { onError } from "./libs/errorLib";
 import "./App.css";
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
     try {
       await Auth.currentSession();
       userHasAuthenticated(true);
-    } catch (error) {
-      if (error !== "No current user") {
-        alert(error);
+    } catch (e) {
+      if (e !== "No current user") {
+        onError(e);
       }
     }
     setIsAuthenticating(false);
