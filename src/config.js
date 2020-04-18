@@ -1,4 +1,5 @@
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
   s3: {
     REGION: "us-east-1",
     BUCKET: "mynotes-uploads",
@@ -13,4 +14,5 @@ export default {
     APP_CLIENT_ID: "5qg9v25o5kshgg13ptc3qh45kc",
     IDENTITY_POOL_ID: "us-east-1:c133bfc6-1bd3-4211-99ef-05fc61d0c147",
   },
+  STRIPE_KEY: "pk_test_c8NBNDMuVRxXnLOqQrvKBpnD00vP3udNvf",
 };
